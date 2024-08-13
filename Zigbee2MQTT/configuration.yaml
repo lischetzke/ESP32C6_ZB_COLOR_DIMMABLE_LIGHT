@@ -1,0 +1,34 @@
+# Zigbee2MQTT, add new supported device: https://www.zigbee2mqtt.io/advanced/support-new-devices/01_support_new_devices.html
+# Important is the part "external_converters"
+
+homeassistant: {}
+frontend:
+  auth_token: [REDACTED]
+  url: https://[REDACTED]
+mqtt:
+  base_topic: [REDACTED]
+  server: mqtt://[REDACTED]
+  user: [REDACTED]
+  password: [REDACTED]
+serial:
+  adapter: ember
+  port: /dev/ttyACM0
+advanced:
+  network_key:
+    - [REDACTED]
+  pan_id: [REDACTED]
+  ext_pan_id:
+    - [REDACTED]
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+  legacy_availability_payload: false
+  last_seen: ISO_8601
+external_converters:
+  - ESP32C6.Light.js
+device_options:
+  legacy: false
+availability:
+  active:
+    timeout: 15
+  passive:
+    timeout: 3600
